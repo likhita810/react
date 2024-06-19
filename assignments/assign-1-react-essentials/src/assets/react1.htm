@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5ede9">
+
+<!--
+<pre>
+                                                ..                   ▄■▀▀▀▀■
+ ▄██████▄                                   –▀▀▀▀▀ ▀▀––            .▀        ▀
+█▀  ▀████ ░  ████ ███▄ ░███▄ █████▄   ▄█████████▄▄███████████▄ ▄██████▄ ▄██▄ ░
+█    ████ ░ ████ ░████ ░█████ ░████ ░████▀▀▀▀██▀ ░  ████ ░   ████▀     ▀████ ░
+ ▀   █▓▓█ ░█▓▓█ ░ █▓▓█ ░█▓▓█ ░ █▓▓█ ░▓▓█▀ ░   ▀     █▓▓█ ░  █▓▓█ ░      █▓▓█ ░
+ . ┌─█▓▓█ █▓▓█ ░──█▒▒█─░█▒▒█─░─█▒▒█─░▀▒▒▒▒▒▒▒█▄──░──█▒▒█─░─█▒▒█ ░ ──────█▒▒█ ░
+   : █░░█ ░█░░█ ░ █░░█ ░█░░█ ░ █░░█ ░  ▀░░░░░░░█ ░  █░░█ ░ █░░█ ░       █░░█ ░
+   . █..█ ░ █..█ ░█..█ ░█..█ ░ █..█ ░     .  █..█ ░ █..█ ░  █..█ ░      █..█ ░
+   | █  █ ░  █  █ █  █ ░█  █ ░ █  █ ░  ▄▀     █  █ ░█  █▄ ░  █  █▄    ▄██  █ ░
+   └ ▀███ ░───████████ ░███▀ ░─████ ░ ██──────████ ░▀███▓▀ ░  ▀██████▀ ▀██▀ ░
+      ░░░░░      ▀███▀  ░░░░░░ ████ ░ ███▄  ▄████ ░   ░░░░      ░░░░░░   ░░
+           ▄                   ▀███ ░  ▀███████▀          .
+   ┌──────▀▀▀▀ ▀▀─────────────── ██ ──────────────────────▀▀▄▄▄  ▄▄▄──────┐
+   : ░                            ▀█▄    ▄                      ▀▀       ░ :
+   |                                ▀––▀                                   |
+   |        We're building a world-class hosting platform at Kinsta.       |
+   |                                                                       |
+   |        🌎 Remote             🧕 Diverse             💪 Kick-ass      |
+   |                                                                       |
+   |                                                                       |
+   |        https://kinsta.com/careers/                     Join us!       |
+   |                                                                       |
+   |                                                                       |
+   | ░                                                                   ░ |
+   └───────▀▀▀▀ ▀▀───────────────────────────────────────────▀▀ ▀▀─────────┘
+</pre>
+-->
+
+<link rel='preload' href='https://kinsta.com/wp-content/themes/kinsta/fonts/pathway-extreme-variable.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' href='https://kinsta.com/wp-content/themes/kinsta/fonts/reckless-neue-light.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' href='https://kinsta.com/wp-content/themes/kinsta/fonts/reckless-neue-regular.woff2' as='font' type='font/woff2' crossorigin='anonymous' />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v17.1.2 (Yoast SEO v19.14) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How To Fix “React Must Be in Scope When Using JSX” Error - Kinsta®</title>
+	<meta name="description" content="Learn how to easily fix the “react must be in scope when using jsx” error using any one of these 5 methods listed." />
+	<link rel="canonical" href="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How To Fix “React Must Be in Scope When Using JSX” Error (5 Methods)" />
+	<meta property="og:description" content="Learn how to easily fix the “react must be in scope when using jsx” error using any one of these 5 methods listed." />
+	<meta property="og:url" content="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/" />
+	<meta property="og:site_name" content="Kinsta®" />
+	<meta property="article:publisher" content="https://www.facebook.com/kinstahosting" />
+	<meta property="article:modified_time" content="2024-04-11T20:28:30+00:00" />
+	<meta property="og:image" content="https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg" />
+	<meta property="og:image:width" content="6084" />
+	<meta property="og:image:height" content="3042" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="Learn how to easily fix the “react must be in scope when using jsx” error using any one of these 5 methods listed." />
+	<meta name="twitter:image" content="https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg" />
+	<meta name="twitter:site" content="@kinsta" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="5 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/","url":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/","name":"How To Fix “React Must Be in Scope When Using JSX” Error - Kinsta®","isPartOf":{"@id":"https://kinsta.com/#website"},"primaryImageOfPage":{"@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#primaryimage"},"image":{"@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#primaryimage"},"thumbnailUrl":"https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg","datePublished":"2023-04-06T15:12:03+00:00","dateModified":"2024-04-11T20:28:30+00:00","description":"Learn how to easily fix the “react must be in scope when using jsx” error using any one of these 5 methods listed.","breadcrumb":{"@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#primaryimage","url":"https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg","contentUrl":"https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx.jpg","width":6084,"height":3042,"caption":"Learning to fix the React Must Be in Scope When Using JSX Error"},{"@type":"BreadcrumbList","@id":"https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://kinsta.com/"},{"@type":"ListItem","position":2,"name":"Resource Center","item":"https://kinsta.com/resources/"},{"@type":"ListItem","position":3,"name":"Knowledge Base","item":"https://kinsta.com/knowledgebase/"},{"@type":"ListItem","position":4,"name":"React Errors","item":"https://kinsta.com/topic/react-errors/"},{"@type":"ListItem","position":5,"name":"How To Fix “React Must Be in Scope When Using JSX” Error (5 Methods)"}]},{"@type":"WebSite","@id":"https://kinsta.com/#website","url":"https://kinsta.com/","name":"Kinsta®","description":"Fast, secure, premium hosting solutions","publisher":{"@id":"https://kinsta.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kinsta.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://kinsta.com/#organization","name":"Kinsta","url":"https://kinsta.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://kinsta.com/#/schema/logo/image/","url":"https://kinsta.com/wp-content/uploads/2023/12/kinsta-logo.jpeg","contentUrl":"https://kinsta.com/wp-content/uploads/2023/12/kinsta-logo.jpeg","width":500,"height":500,"caption":"Kinsta"},"image":{"@id":"https://kinsta.com/#/schema/logo/image/"},"sameAs":["https://www.instagram.com/kinstahosting/","https://www.linkedin.com/company/kinsta/","https://www.pinterest.com/kinstahosting/","https://www.youtube.com/c/Kinsta","https://www.facebook.com/kinstahosting","https://twitter.com/kinsta"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Kinsta® &raquo; Feed" href="https://kinsta.com/feed/" />
+<link rel='stylesheet' id='kinsta-css-style-css' href='https://kinsta.com/wp-content/themes/kinsta/dist/style.css?ver=505e0f02321c24ca9dd5' type='text/css' media='all' />
+<link rel='stylesheet' id='kinsta-css-templates/post-types/knowledgebase-css' href='https://kinsta.com/wp-content/themes/kinsta/dist/templates/post-types/knowledgebase.css?ver=e4754c31afca9bba54c3' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://kinsta.com/wp-json/" /><link rel="alternate" type="application/json" href="https://kinsta.com/wp-json/wp/v2/knowledgebase/150780" /><link rel='shortlink' href='https://kinsta.com/?p=150780' />
+<link rel="alternate" type="application/json+oembed" href="https://kinsta.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Fknowledgebase%2Freact-must-be-in-scope-when-using-jsx%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://kinsta.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkinsta.com%2Fknowledgebase%2Freact-must-be-in-scope-when-using-jsx%2F&#038;format=xml" />
+
+<link rel="alternate" href="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/" hreflang="x-default" />
+<link rel="alternate" href="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/" hreflang="en" />
+<link rel="alternate" href="https://kinsta.com/it/knowledgebase/react-must-be-in-scope-when-using-jsx/" hreflang="it" />
+<link rel="alternate" href="https://kinsta.com/pt/base-de-conhecimento/react-must-be-in-scope-when-using-jsx/" hreflang="pt" />
+<link rel="alternate" href="https://kinsta.com/fr/base-de-connaissances/react-must-be-in-scope-when-using-jsx/" hreflang="fr" />
+<link rel="alternate" href="https://kinsta.com/de/wissensdatenbank/react-must-be-in-scope-when-using-jsx/" hreflang="de" />
+<link rel="alternate" href="https://kinsta.com/jp/knowledgebase/react-must-be-in-scope-when-using-jsx/" hreflang="ja" />
+<link rel="alternate" href="https://kinsta.com/nl/kennisbank/react-must-be-in-scope-when-using-jsx/" hreflang="nl" />
+<link rel="alternate" href="https://kinsta.com/es/base-de-conocimiento/react-debe-estar-dentro-del-alcance-cuando-se-utiliza-jsx/" hreflang="es" />
+<link rel="alternate" href="https://kinsta.com/se/kunskapsbas/react-must-be-in-scope-when-using-jsx/" hreflang="sv" />
+<link rel="alternate" href="https://kinsta.com/dk/videnbase/react-must-be-in-scope-when-using-jsx/" hreflang="da" />
+<script>window.$kinsta = {"env":"production","maintenanceMode":false,"siteURL":"https:\/\/kinsta.com\/","siteCode":"en","languageCode":"en","restBaseURL":"https:\/\/kinsta.com\/wp-json\/","adminAjaxURL":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","themeDirURL":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/","uploadDirBaseURL":"https:\/\/kinsta.com\/wp-content\/uploads\/","postURL":{"\/legal\/privacy-policy":"https:\/\/kinsta.com\/legal\/privacy-policy\/","\/legal\/terms-service":"https:\/\/kinsta.com\/legal\/terms-service\/","\/pricing":"https:\/\/kinsta.com\/pricing\/","\/signup":"https:\/\/kinsta.com\/signup\/","\/contact-us":"https:\/\/kinsta.com\/contact-us\/","\/pricing-calculator":"https:\/\/kinsta.com\/pricing-calculator\/","\/wordpress-hosting\/pricing":"https:\/\/kinsta.com\/wordpress-hosting\/pricing\/","\/application-hosting\/pricing":"https:\/\/kinsta.com\/application-hosting\/pricing\/","\/database-hosting\/pricing":"https:\/\/kinsta.com\/database-hosting\/pricing\/"},"stripe":{"publicKey":"pk_live_r16EiSaRITiPDMKQjLeoOviT"},"isSingular":true,"wpPost":{"id":150780,"title":"How To Fix \u201cReact Must Be in Scope When Using JSX\u201d Error (5 Methods)","type":"knowledgebase"}}</script>
+            <script type="application/ld+json" id="wl-jsonld">[{"@context":"http:\/\/schema.org","@id":"http:\/\/data.wordlift.io\/wl0150038\/knowledgebase\/how-to-fix-react-must-be-in-scope-when-using-jsx-error","@type":"Article","mainEntityOfPage":"https:\/\/kinsta.com\/knowledgebase\/react-must-be-in-scope-when-using-jsx\/","image":[{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/04\/react-must-be-in-scope-when-using-jsx-1200x675.jpg","width":1200,"height":675},{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/04\/react-must-be-in-scope-when-using-jsx-1200x900.jpg","width":1200,"height":900},{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/04\/react-must-be-in-scope-when-using-jsx-1200x1200.jpg","width":1200,"height":1200},{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2023\/04\/react-must-be-in-scope-when-using-jsx.jpg","width":6084,"height":3042}],"headline":"How To Fix \u201cReact Must Be in Scope When Using JSX\u201d Error (5 Methods)","url":"https:\/\/kinsta.com\/knowledgebase\/react-must-be-in-scope-when-using-jsx\/","datePublished":"2023-04-06T17:12:03+02:00","dateModified":"2024-04-11T22:28:30+02:00","wordCount":1150,"commentCount":"1","inLanguage":"en-US","publisher":{"@type":"Organization","@id":"http:\/\/data.wordlift.io\/wl0150038\/entity\/kinsta","name":"Kinsta","sameAs":["https:\/\/www.google.com\/maps?cid=2028540986187945162","https:\/\/opencorporates.com\/companies\/us_de\/7460224.rdf","https:\/\/opencorporates.com\/companies\/gb\/09030972.rdf","https:\/\/g.co\/kg\/g\/11h_cs1m3s","https:\/\/www.linkedin.com\/company\/kinsta\/","https:\/\/profiles.wordpress.org\/kinstahosting\/","https:\/\/www.facebook.com\/kinstahosting","https:\/\/www.instagram.com\/kinstahosting\/","https:\/\/www.youtube.com\/kinsta","https:\/\/x.com\/kinsta"],"logo":{"@type":"ImageObject","url":"https:\/\/kinsta.com\/wp-content\/uploads\/2020\/12\/kinsta-logo--publisher-logo.png","width":600,"height":60}},"author":{"@type":"Person","@id":"http:\/\/data.wordlift.io\/wl0150038\/author\/joelolawanle","name":"Joel Olawanle","givenName":"Joel","familyName":"Olawanle","url":"https:\/\/kinsta.com\/blog\/author\/joelolawanle\/"},"mentions":[{"@id":"http:\/\/data.wordlift.io\/wl0150038\/topic\/react"},{"@id":"http:\/\/data.wordlift.io\/wl0150038\/topic\/react-errors"}]},{"@context":"http:\/\/schema.org","name":"React","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/topic\/react","description":"","url":["https:\/\/kinsta.com\/topic\/react\/"],"mainEntityOfPage":"https:\/\/kinsta.com\/topic\/react\/"},{"@context":"http:\/\/schema.org","name":"React Errors","@type":["Thing"],"@id":"http:\/\/data.wordlift.io\/wl0150038\/topic\/react-errors","description":"","mainEntityOfPage":"https:\/\/kinsta.com\/topic\/react-errors\/"}]</script><link rel="icon" href="https://kinsta.com/wp-content/uploads/2023/12/cropped-kinsta-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://kinsta.com/wp-content/uploads/2023/12/cropped-kinsta-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kinsta.com/wp-content/uploads/2023/12/cropped-kinsta-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://kinsta.com/wp-content/uploads/2023/12/cropped-kinsta-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.page-template-template-home .wp-block-kinsta-hero-title.is-style-center-screenshot .wp-block-kinsta-hero-title__content>:not(.alignwide):not(.alignfull), .page-template-template-home .wp-block-kinsta-hero-title.is-style-center-screenshot .wp-block-kinsta-hero-title__secondary>:not(.alignwide):not(.alignfull) {
+	max-width: 48rem !important;
+}
+
+
+/* Hack to make buttons white on static page */
+body.page-id-165126 .wp-block-kinsta-button.has-primary-color {
+  --color-primary: white;
+}
+body.page-id-165126 .wp-block-kinsta-button.has-primary-color:not(:hover):not(:focus) {
+  --wp--preset--color--primary: var(--color-dark);
+}
+
+@media (min-width: 66em) {
+  body.page-id-165126 .site-menu--theme-light:not(.is-scrolled) .button {
+    background-color: white;
+  }
+
+  body.page-id-165126 .site-menu--theme-light:not(.is-scrolled) .button:hover,
+  body.page-id-165126 .site-menu--theme-light:not(.is-scrolled) .button:focus {
+    border-color: white;
+    color: white;
+  }
+}		</style>
+		</head>
+
+<body class="knowledgebase-template-default single single-knowledgebase postid-150780 wp-embed-responsive object-150780">
+
+<a class="skip-to-content" href="#main">
+  Skip to content</a>
+
+<script  type="text/javascript" src="https://kinsta.com/wp-content/themes/kinsta/dist/early-load.js?ver=f6d096393233220838f5"></script>
+<div class="site-header">
+    
+<header id="nav" class="topbar-container theme--dark spectra-variables">
+    <div class="topbar" data-state-search="collapsed">
+        <div class="topbar__inner">
+            <div class="topbar__homebar">
+    <a  href="https://kinsta.com/" class="topbar__logo" rel="home">
+        <svg  class="icon icon--logo" aria-hidden="true" focusable="false" title="Kinsta®"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#logo" /></svg><span class="screen-reader-text">Kinsta®</span>    </a>
+
+    <a  href="#nav" id="nav-toggle" class="topbar__burger" aria-label="Hamburger menu" aria-haspopup="true" aria-expanded="false">
+        <svg  class="icon icon--hamburger" aria-hidden="true" focusable="false" title="Navigation"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#hamburger" /></svg><span class="screen-reader-text">Navigation</span>    </a>
+</div>
+<nav class="megamenu" aria-label="Main menu">
+    <ul class="megamenu__ul">
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-0" tabindex="0" href="#megamenu-item-0__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        WordPress Hosting                    </span>
+                    <svg  class="icon icon--chevron" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#chevron" /></svg>                </a>
+                
+<div  id="megamenu-item-0__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column">
+            <div class="posts-grid posts-grid--1-cols megamenu__dropdown__item-query">
+<div class="post-preview post-135490 page type-page status-publish has-post-thumbnail hentry wl_entity_type-article wl_entity_type-service">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/wordpress-hosting/">
+                        <img width="360" height="180" src="https://kinsta.com/wp-content/uploads/2023/12/kinsta-wordpress-hosting-en-360x180.jpg" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/wordpress-hosting/" class="post-preview__link">
+            Powerful Managed WordPress Hosting        </a>
+    </h2>
+
+    </div>
+<span class="megamenu__dropdown__item button button--tertiary button--small megamenu__dropdown__item--more" aria-hidden="true" style="padding: 0; margin-top: -0.5em;">Learn more</span>    </div>
+</div>
+</div>    </div>
+                    <div class="megamenu__dropdown__column">
+            <h6 class="megamenu__dropdown__column__title">WordPress highlights</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/migration/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Free site migrations        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/edge-caching/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Edge caching        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/apm-tool/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            APM tool        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/security/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Security        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/add-ons/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Add-ons        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+                    <div class="megamenu__dropdown__column">
+            <h6 class="megamenu__dropdown__column__title">Platform highlights</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/cloudflare-integration/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Cloudflare integration        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/docs/kinsta-api/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            API        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/kinsta-support/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Expert support        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-1" tabindex="0" href="#megamenu-item-1__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        Solutions                    </span>
+                    <svg  class="icon icon--chevron" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#chevron" /></svg>                </a>
+                
+<div  id="megamenu-item-1__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column">
+            <h6 class="megamenu__dropdown__column__title">We power your</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/agencies/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Agency        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/enterprise/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Enterprise        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/small-business/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Small business        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/woocommerce/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            WooCommerce store        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/nonprofits/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Non-profit organization        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/wordpress-hosting/single-sites/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Single high-resource site        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/static-site-hosting/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Static site        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/application-hosting/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Web application        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/database-hosting/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Database        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+                    <div class="megamenu__dropdown__column megamenu__dropdown__column--wide">
+            <h6 class="megamenu__dropdown__column__title">Case studies</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <div class="posts-grid posts-grid--2-cols megamenu__dropdown__item-query">
+<div class="post-preview post-177193 case_studies type-case_studies status-publish has-post-thumbnail hentry segment-agency">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/clients/express-legal-funding/">
+                        <img width="800" height="400" src="https://kinsta.com/wp-content/uploads/2024/04/case-study-Express-Legal-Funding-1-800x400.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/clients/express-legal-funding/" class="post-preview__link">
+            How Express Legal Funding grew organic traffic by 50,000% and simplified site management        </a>
+    </h2>
+
+    </div>
+    </div>
+</div>
+
+<div class="post-preview post-178213 case_studies type-case_studies status-publish has-post-thumbnail hentry segment-agency">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/clients/atomic-smash/">
+                        <img width="800" height="400" src="https://kinsta.com/wp-content/uploads/2024/05/case-study-Atomic-Smash-800x400.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/clients/atomic-smash/" class="post-preview__link">
+            Atomic Smash delivers faster sites with 3x site resources and 99.9% uptime        </a>
+    </h2>
+
+    </div>
+    </div>
+</div>
+</div>                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/clients/" class="megamenu__dropdown__item button button--tertiary button--small megamenu__dropdown__item--more">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            More case studies        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+                                <li class="megamenu__li">
+                <a  id="megamenu-item-2" tabindex="0" href="https://kinsta.com/pricing/" class="megamenu__item button button--small button--tertiary">
+                    <span class="megamenu__item__title">
+                        Pricing                    </span>
+                                    </a>
+                            </li>
+                                <li class="megamenu__li">
+                <a  id="megamenu-item-3" tabindex="0" href="https://kinsta.com/docs/" class="megamenu__item button button--small button--tertiary">
+                    <span class="megamenu__item__title">
+                        Docs                    </span>
+                                    </a>
+                            </li>
+                                <li class="megamenu__li megamenu__li--has-children">
+                <a  id="megamenu-item-4" tabindex="0" href="#megamenu-item-4__child" class="megamenu__item button button--small button--tertiary megamenu__item--has-children js-megamenu-toggle-button">
+                    <span class="megamenu__item__title">
+                        Help                    </span>
+                    <svg  class="icon icon--chevron" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#chevron" /></svg>                </a>
+                
+<div  id="megamenu-item-4__child" class="megamenu__dropdown">
+    <div class="megamenu__dropdown__inner">
+        <div  class="megamenu__dropdown__container">
+    <div class="megamenu__dropdown__columns">
+                    <div class="megamenu__dropdown__column megamenu__dropdown__column--dual">
+            <h6 class="megamenu__dropdown__column__title">Resources</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/blog/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Blog        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/changelog/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Changelog        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://status.kinsta.com/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            System status        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/knowledgebase/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Knowledge Base        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/kinsta-alternatives/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Compare Kinsta to competitors        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/tools/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Development tools        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/resources/" class="megamenu__dropdown__item button button--tertiary button--small megamenu__dropdown__item--more">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            All resources        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+                    <div class="megamenu__dropdown__column">
+            <h6 class="megamenu__dropdown__column__title">Contact us</h6>
+        <ul class="megamenu__dropdown__column__list">
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/contact-us/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Send us a question        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="tel:+18886102915" class="megamenu__dropdown__item button button--tertiary button--small kinsta-tel">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Call sales        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://kinsta.com/talk-to-sales/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Request a live demo        </span>
+            </div>
+</a>
+                </li>
+                            <li class="megamenu__dropdown__li">
+                    <a  href="https://community.kinsta.com/" class="megamenu__dropdown__item button button--tertiary button--small">
+        <div class="megamenu__dropdown__item__text">
+        <span class="megamenu__dropdown__item__title">
+            Ask the community        </span>
+            </div>
+</a>
+                </li>
+                    </ul>
+    </div>
+            </div>
+</div>
+    </div>
+</div>
+            </li>
+            </ul>
+</nav>
+
+<div class="topbar__actions">
+            <!-- <div class="topbar__search" id="search-form-container"> -->
+            <form
+                class="topbar__search"
+                method='get' action='https://kinsta.com'            >
+                <label>
+                    <span class="screen-reader-text">Search</span>
+                    <input name='s' type='text' required='required' value='' placeholder='Search&hellip;' />                </label>
+                <button class="button button--tertiary button--small topbar__search__icon" aria-label="Search">
+                    <svg  class="icon icon--search" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#search" /></svg>                </button>
+            </form>
+        <!-- </div> -->
+    
+                    <a  href="https://my.kinsta.com/login/?lang=en" class="topbar__actions__item button button--small topbar__hidden-small button--tertiary">
+            Login        </a>
+                    <a  href="https://kinsta.com/signup/" class="topbar__actions__item button button--small button--primary">
+            Sign up        </a>
+    </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+<main id="main">
+
+
+<link rel="stylesheet" href="https://kinsta.com/wp-content/themes/kinsta/dist/templates/article-dual-sidebar.css?ver=14f91c597ecb6533349b" /><article class="post-150780 knowledgebase type-knowledgebase status-publish has-post-thumbnail hentry topic-react topic-react-errors">
+            
+<div class="article-title container container--narrow">
+            
+    <nav  class="breadcrumbs breadcrumbs--only-last" aria-label="Breadcrumbs">
+        <ol>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/" class="breadcrumbs__link">
+                            Home                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/resources/" class="breadcrumbs__link">
+                            Resource Center                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li">
+                                            <a  href="https://kinsta.com/knowledgebase/" class="breadcrumbs__link">
+                            Knowledge Base                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li is-parent">
+                                            <a  href="https://kinsta.com/topic/react-errors/" class="breadcrumbs__link">
+                            React Errors                        </a>
+                                    </li>
+                                            <li  class="breadcrumbs__li is-current">
+                                            <span class="breadcrumbs__link" aria-current="true">
+                            How To Fix “React Must Be in Scope When Using JSX” Error (5 Methods)                        </span>
+                                    </li>
+                    </ol>
+    </nav>
+    
+            <h1 class="article-title__title">
+            How To Fix “React Must Be in Scope When Using JSX” Error (5 Methods)        </h1>
+    
+    
+            <dl class="article-title__meta">
+                            <div class="article-title__meta__item">
+                                        <dt class="article-title__meta__label">Published</dt>
+                    <dd class="article-title__meta__value">April 6, 2023</dd>
+                </div>
+                            <div class="article-title__meta__item">
+                                        <dt class="article-title__meta__label">Updated</dt>
+                    <dd class="article-title__meta__value">April 11, 2024</dd>
+                </div>
+                    </dl>
+    
+    
+            <img width="1024" height="512" src="https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-1024x512.jpg" class="article-title__featured-image wp-post-image" alt="Learning to fix the React Must Be in Scope When Using JSX Error" decoding="async" loading="eager" srcset="https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-1024x512.jpg 1024w, https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-300x150.jpg 300w, https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-768x384.jpg 768w, https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-1536x768.jpg 1536w, https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-2048x1024.jpg 2048w, https://kinsta.com/wp-content/uploads/2023/04/react-must-be-in-scope-when-using-jsx-360x180.jpg 360w" sizes="(max-width: 1024px) 100vw, 1024px" />    </div>
+    
+    <div class="article-dual-sidebar has-toc has-download">
+        <div class="article-dual-sidebar__before">
+            <div class="sidebar"><div class="sidebar-section sidebar-section--grow"><kinsta-sidebar-toc  show-download-post-form="true" json-auto-toc-props="{&quot;exclude&quot;:&quot;last&quot;}"></kinsta-sidebar-toc>
+</div></div>        </div>
+
+        <div class="user-content post-content js-anchor-hashes article-dual-sidebar__content" id="post-content-150780">
+            <p>Working with <a href="https://kinsta.com/knowledgebase/what-is-react-js/">React</a> can sometimes be tricky, especially when dealing with errors that are not always easy to understand.</p>
+<p>A common error developers may encounter is the “React must be in scope when using JSX” error. This error occurs when React is not properly imported or initialized in a component that uses <a href="https://kinsta.com/knowledgebase/what-is-jsx/">JSX syntax</a>.</p>
+<p>In this article, we will discuss the causes of this error and provide solutions on how to fix it.</p>
+<div></div><kinsta-auto-toc heading="Table of Contents" exclude="last" list-style="arrow" selector="h2" count-number="-1"></kinsta-auto-toc>
+<h2>What Causes the “react must be in scope when using jsx” Error?</h2>
+<p>JSX (JavaScript XML) is a syntax extension that allows you to write <a href="https://kinsta.com/knowledgebase/what-is-html/">HTML</a>-like code in <a href="https://kinsta.com/javascript/">JavaScript</a>. Browsers don’t understand JSX, but preconfigured toolkits like Create React App include a JSX transform tool under the hood that converts the JSX code into valid JavaScript code, which can be interpreted by browsers.</p>
+<p>In React versions prior to 17.0, JSX was transformed into <code>React.createElement()</code> function calls by the JSX transformer at compile-time. This required importing React for the React elements to work. With the introduction of a new JSX transform in React v17.0, special functions from the React package’s new entry points are automatically imported, eliminating the need to import React in every file that uses JSX explicitly.</p>
+<p>As an example, let’s take a look at the following functional component:</p>
+<pre><code class="language-jsx">function App() {
+  return &lt;h1&gt;Welcome to Kinsta!&lt;/h1&gt;;
+}</code></pre>
+<p>At compile time, it is transformed into regular JavaScript:</p>
+<pre><code class="language-jsx">function App() {
+  return React.createElement('h1', null, 'Welcome to Kinsta!');
+}</code></pre>
+<p>Because React is undefined, this will always throw the error “‘react’ must be in scope when using jsx.”</p>
+
+<h2>2 Ways To Fix the “react must be in scope when using jsx” Error</h2>
+<p>This error can be fixed in a few ways depending on the version of React you are using.</p>
+<ul>
+<li><a href="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#1-include-or-correct-react-import-declaration-fix-for-before-react-v17">Before React v17</a></li>
+<li><a href="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/#2-update-eslint-configuration-fix-for-react-v17-and-higher">React v17 and Higher</a></li>
+</ul>
+<h3>1. Include or Correct React Import Declaration (Fix for Before React v17)</h3>
+<p>If you are using an older version of React, you may be missing or have an incorrect import statement for ‘react’. Make sure you have the correct import statement at the top of your file (with a capital “R” on “React”):</p>
+<pre><code class="language-jsx">// Wrong ❌
+import react  from 'react';
+
+// Correct ✅
+import React  from 'react';</code></pre>
+<p>Your functional component will now look like this when transformed into regular <a href="https://kinsta.com/blog/errors-in-javascript/">JavaScript</a>:</p>
+<pre><code class="language-jsx">import React  from 'react';
+
+function App() {
+  return React.createElement('h1', null, 'Welcome to Kinsta!');
+}</code></pre>
+<h3>2. Update ESLint Configuration (Fix for React v17 and Higher)</h3>
+<p>In React v17.0, a <a href="https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html" target="_blank" rel="noopener noreferrer">new JSX transform</a> was introduced, which automatically imports special functions from the React package’s new entry points, removing the need to import React in every file that uses JSX explicitly.</p>
+<p>For example, take the following functional component:</p>
+<pre><code class="language-jsx">function App() {
+  return &lt;h1&gt;Welcome to Kinsta!&lt;/h1&gt;;
+}</code></pre>
+<p>This is what the new JSX transform compiles it to:</p>
+<pre><code class="language-jsx">// Inserted by a compiler (don't import it yourself!)
+import {jsx as _jsx} from 'react/jsx-runtime';
+
+function App() {
+  return _jsx('h1', { children: 'Welcome to Kinsta!' });
+}</code></pre>
+<p>This means you no longer need to import React into your components to use JSX. If you keep getting this error even after checking your <strong>package.json</strong> file to confirm your React version, you have to update your <a href="https://www.npmjs.com/package/eslint-config-react-app" target="_blank" rel="noopener noreferrer">ESLint configurations</a>.</p>
+<p>At this stage, this is technically no longer a React error but rather an ESLint error.</p>
+<p><strong>Note:</strong> You often use linting tools like ESLint in your React project because it checks your code to detect potential errors that can break your code either now or in the future. This tool forces you to import React when it detects any JSX around the file.</p>
+<p>When you are sure your React version is v17.0 or higher, then it’s safe to disable the rules that ensure you import React when you use JSX in your React.</p>
+<p>There are two major ways to update ESLint configurations. If you have a <strong>.eslintrc.js</strong> or <strong>.eslintrc.json</strong> file. Add the following rules to your <strong>.eslintrc.js</strong> file.</p>
+<pre><code class="language-json">"rules": {
+  // ...
+  "react/react-in-jsx-scope": "off",
+  "react/jsx-uses-react": "off",
+ }</code></pre>
+<p>Else, you can update the <code>eslintConfig</code> object in your <strong>package.json</strong> file:</p>
+<pre><code class="language-json">{
+  "name": "quotes-circle",
+  // ...
+  "dependencies": {
+    // ...
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+}</code></pre>
+<p>In the code above, <a href="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md" target="_blank" rel="noopener noreferrer">react-in-jsx-scope</a> rule is turned off, so ESLint won’t throw errors when you fail to import React.</p>
+<p>At this point, you should have fixed the ‘react’ must be in scope when using jsx” error once and for all. But it could be the case that something got in your way, and the error is still there.</p>
+<p>Let’s take a look at a few more ways for you to try to fix it.</p>
+<aside id="MTUwNzgw" data-r3koi="Im1pZGRsZSI=|ImVuX1VTIg==" data-8rcxf="dTJCbXpFV01fUA==" data-ty="S1F0bHBDUDFaY1VzSGFGb3lrSTJu" data-au-drs7="YU04ekk5aGxReFowNzYtbkhVRA==" data-gvl7="TERURXMwa295aF9mR2NqUlk=" data-y="X3ZwTXpkeTMwRzF4" data-8drsht_="LVF3TXM5Vjg=" class="WzIyMjY1LDIyMjc5XQ==" data-_ompj="a0xSN01FaDEtZmM2ZFVyVjMwSk9xag=="></aside><h2>Additional 3 Ways to Fix the “react must be in scope when using jsx” Error</h2>
+<p>Suppose the error still persists. Here are three additional ways to fix the ‘react’ must be in scope when using jsx” error.</p>
+<div></div><kinsta-auto-toc list-style="decimal" selector="h3" count-number="3" sub-toc="true"></kinsta-auto-toc>
+<h3>1. Update the Version of React-Scripts</h3>
+<p>You can update the version of your project’s <strong>react-scripts</strong> by running the following command in your terminal:</p>
+<pre><code class="language-bash">// npm
+npm install react-scripts@latest
+
+// yarn
+yarn add react-scripts@latest</code></pre>
+<h3>2. Delete Node_modules Folder and package-lock.json File</h3>
+<p>if the error persists, then it’s possible some of your dependencies may be wrongly installed. You can fix this by deleting your <strong>node_modules</strong> folder and <strong>package-lock.json</strong> file (not <strong>package.json</strong>). Then run the following command to install the packages afresh:</p>
+<pre><code class="language-bash">npm install</code></pre>
+<p>Then restart your dev server.</p>
+<h3>3. Update the Versions of React and React-Dom</h3>
+<p>Finally, if the error persists, update your versions of <strong>react</strong> and <strong>react-dom</strong> using the commands below:</p>
+<pre><code class="language-bash">// npm
+npm install react@latest react-dom@latest
+
+// if you use TypeScript
+npm install --save-dev @types/react@latest @types/react-dom@latest
+
+// OR
+
+// Yarn
+yarn add react@latest react-dom@latest
+
+// if you use TypeScript
+yarn add @types/react@latest @types/react-dom@latest --dev</code></pre>
+<p>At this point, it is certain that this error will be fixed.</p>
+<h2>Summary</h2>
+<p>The “React must be in scope when using JSX” error is a common issue <a href="https://kinsta.com/blog/types-of-developers/">developers</a> may encounter when working with React. This error occurs majorly in earlier versions of React v17 when the JSX syntax is used in a file, but the React library is not properly imported or included. It also occurs in higher versions of React v17 when ESLint configurations throw the error or when some dependencies in your <strong>node_module</strong>s folder are wrongly installed.</p>
+<p>Based on the React version you’re working with, there will be different ways you can use to fix this error which we outlined in the article.</p>
+<p><em>Now it’s your turn: Have you ever encountered this issue? How did you solve it? Are there any other approaches you used that are not covered in this article? Let us know in the comments!</em></p>
+<aside class="user-content mt--40">
+<hr class="mini-divider">
+<p>Get all your <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/application-hosting/pricing/">applications</a>, <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/database-hosting/pricing/">databases</a>, and <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/wordpress-hosting/pricing/">WordPress sites</a> online and under one roof. Our feature-packed, high-performance cloud platform includes:</p>
+<ul>
+<li>Easy setup and management in the MyKinsta dashboard</li>
+<li>24/7 expert support</li>
+<li>The best Google Cloud Platform hardware and network, powered by Kubernetes for maximum scalability</li>
+<li>An enterprise-level Cloudflare integration for speed and security</li>
+<li>Global audience reach with up to 37 data centers and 260 PoPs worldwide</li>
+</ul>
+<p>Get started with a free trial of our <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/application-hosting/pricing/">Application Hosting</a> or <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/database-hosting/pricing/">Database Hosting</a>. Explore our <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/wordpress-hosting/pricing/">plans</a> or <a data-track-ga-category="kb" data-track-ga-label="kb-bottom-cta" href="https://kinsta.com/contact-us/">talk to sales</a> to find your best fit.</p>
+</aside>        </div>
+
+        <div class="article-dual-sidebar__after">
+            <div class="sidebar" style="--sidebar-padding:20%;"></div>        </div>
+    </div>
+</article>
+<kinsta-article-feedback  post-id="150780"></kinsta-article-feedback>
+<link rel="stylesheet" href="https://kinsta.com/wp-content/themes/kinsta/dist/patterns/related.css?ver=eab3fd4da8653b8b242f" /><div class="related-posts container">
+    <h2 class="related-posts__title">
+        Related Articles    </h2>
+
+    <div class="related-posts__inner">
+        <div class="posts-grid posts-grid--3-cols related-posts__list">
+<div class="post-preview post-149853 post type-post status-publish format-standard has-post-thumbnail hentry topic-javascript-frameworks topic-react topic-static-site-generators wl_entity_type-article">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/blog/react-static-site-generator/">
+                        <img width="360" height="180" src="https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-360x180.jpg" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" srcset="https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-360x180.jpg 360w, https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-300x150.jpg 300w, https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-1024x512.jpg 1024w, https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-768x384.jpg 768w, https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-1536x768.jpg 1536w, https://kinsta.com/wp-content/uploads/2023/03/react-static-site-generator-2048x1024.jpg 2048w" sizes="(max-width: 360px) 100vw, 360px" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/blog/react-static-site-generator/" class="post-preview__link">
+            Top 6 React Static Site Generators to Consider        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Dive in and discover 6 React static site generators that allow you to generate a static website using React components as the building blocks.        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Reading time</span></dt>
+        <dd>13 min read</dd>
+            <dt><span class="screen-reader-text">Updated date</span></dt>
+        <dd>November 6, 2023</dd>
+            <dt><span class="screen-reader-text">Post type</span></dt>
+        <dd>Blog</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>JavaScript Frameworks</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>React</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>Static Site Generators</dd>
+    </dl>
+    </div>
+</div>
+
+<div class="post-preview post-143460 post type-post status-publish format-standard has-post-thumbnail hentry topic-javascript-tutorials topic-react wl_entity_type-article">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/blog/best-react-tutorials/">
+                        <img width="360" height="180" src="https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials-360x180.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" srcset="https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials-360x180.png 360w, https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials-300x150.png 300w, https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials-1024x512.png 1024w, https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials-768x384.png 768w, https://kinsta.com/wp-content/uploads/2023/01/best-react-tutorials.png 1460w" sizes="(max-width: 360px) 100vw, 360px" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/blog/best-react-tutorials/" class="post-preview__link">
+            15+ Best React Tutorials and Resources for Developers        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            React is one of the most popular JavaScript libraries today. Haven&#039;t picked it up yet? This article will show you exactly how to get started.        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Reading time</span></dt>
+        <dd>35 min read</dd>
+            <dt><span class="screen-reader-text">Updated date</span></dt>
+        <dd>July 6, 2023</dd>
+            <dt><span class="screen-reader-text">Post type</span></dt>
+        <dd>Blog</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>JavaScript Tutorials</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>React</dd>
+    </dl>
+    </div>
+</div>
+
+<div class="post-preview post-139844 post type-post status-publish format-standard has-post-thumbnail hentry topic-javascript-frameworks topic-react wl_entity_type-article">
+    <a class="post-preview__thumbnail" aria-hidden="true" tabindex="-1" href="https://kinsta.com/blog/svelte-vs-react/">
+                        <img width="360" height="180" src="https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react-360x180.png" class="attachment-kinsta-thumbnail size-kinsta-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" aria-hidden="true" tabindex="-1" srcset="https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react-360x180.png 360w, https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react-300x150.png 300w, https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react-1024x512.png 1024w, https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react-768x384.png 768w, https://kinsta.com/wp-content/uploads/2022/12/svelte-vs-react.png 1460w" sizes="(max-width: 360px) 100vw, 360px" />            </a>
+
+    <div class="post-preview__content">
+        
+<div class="post-preview__title-excerpt">
+    <h2 class="post-preview__title">
+                <a  href="https://kinsta.com/blog/svelte-vs-react/" class="post-preview__link">
+            Svelte vs React: Features, Performance, and More        </a>
+    </h2>
+
+            <div class="post-preview__excerpt">
+            Is Svelte the future of JavaScript development or will React reign supreme? We explore their key differences to help you choose between them.        </div>
+    </div>
+<dl class="post-preview__meta">
+            <dt><span class="screen-reader-text">Reading time</span></dt>
+        <dd>12 min read</dd>
+            <dt><span class="screen-reader-text">Updated date</span></dt>
+        <dd>November 6, 2023</dd>
+            <dt><span class="screen-reader-text">Post type</span></dt>
+        <dd>Blog</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>JavaScript Frameworks</dd>
+            <dt><span class="screen-reader-text">Topic</span></dt>
+        <dd>React</dd>
+    </dl>
+    </div>
+</div>
+</div>
+            </div>
+</div>
+<aside data-r3koi="ImJvdHRvbSI=|ImVuX1VTIg==" data-sGv="dWstY0t3bnIwQnpZT2VWSWF0RDUy" data-Upw5="UE1FSE8ueVY2TnM=" data-Yzd="Z2NmMEpwOHQ0" data-SFAp="RUxrZzJVY2pJZVcx" id="MTUwNzgw" data-NSmg="SXBKcmc4RGJSanhoTUIx" class="WzIyMjY1LDIyMjc5XQ=="></aside></main>
+<footer class="site-footer container spectra-variables">
+    <nav class="site-footer__nav" aria-label="Footer navigation"><ul id="menu-footer-menu" class="menu"><li id="menu-item-95015" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95015"><h3 >Products</h3>
+<ul class="sub-menu">
+	<li id="menu-item-107224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107224"><a href="https://kinsta.com/wordpress-hosting/">Managed WordPress Hosting</a></li>
+	<li id="menu-item-136895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136895"><a href="https://kinsta.com/application-hosting/">Web Application Hosting</a></li>
+	<li id="menu-item-136782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136782"><a href="https://kinsta.com/database-hosting/">Managed Database Hosting</a></li>
+	<li id="menu-item-166240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166240"><a href="https://kinsta.com/static-site-hosting/">Static Site Hosting</a></li>
+	<li id="menu-item-137354" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137354"><a href="https://kinsta.com/pricing/">Pricing</a></li>
+</ul>
+</li>
+<li id="menu-item-95011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95011"><h3 >Feature highlights</h3>
+<ul class="sub-menu">
+	<li id="menu-item-95024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95024"><a href="https://kinsta.com/cloudflare-integration/">Cloudflare integration</a></li>
+	<li id="menu-item-169229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-169229"><a href="https://kinsta.com/docs/kinsta-api/">Kinsta API</a></li>
+	<li id="menu-item-95041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95041"><a href="https://kinsta.com/kinsta-support/">Expert support</a></li>
+	<li id="menu-item-95021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95021"><a href="https://kinsta.com/wordpress-hosting/migration/">Free WordPress migrations</a></li>
+	<li id="menu-item-95028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95028"><a href="https://kinsta.com/apm-tool/">APM tool</a></li>
+	<li id="menu-item-95029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95029"><a href="https://kinsta.com/devkinsta/">DevKinsta</a></li>
+	<li id="menu-item-149905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149905"><a href="https://kinsta.com/edge-caching/">Edge Caching</a></li>
+	<li id="menu-item-180624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180624"><a href="https://kinsta.com/wordpress-hosting/dedicated/">Dedicated WordPress Hosting</a></li>
+	<li id="menu-item-118367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118367"><a href="https://kinsta.com/add-ons/">WordPress plan add-ons</a></li>
+</ul>
+</li>
+<li id="menu-item-170652" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-170652"><h3 >Use cases</h3>
+<ul class="sub-menu">
+	<li id="menu-item-95023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95023"><a href="https://kinsta.com/wordpress-hosting/enterprise/">Enterprise</a></li>
+	<li id="menu-item-95670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95670"><a href="https://kinsta.com/wordpress-hosting/agencies/">Agency</a></li>
+	<li id="menu-item-112328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-112328"><a href="https://kinsta.com/wordpress-hosting/woocommerce/">WooCommerce store</a></li>
+	<li id="menu-item-170655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170655"><a href="https://kinsta.com/wordpress-hosting/small-business/">Small business</a></li>
+	<li id="menu-item-170654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170654"><a href="https://kinsta.com/wordpress-hosting/nonprofits/">Non-profit organization</a></li>
+	<li id="menu-item-124120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124120"><a href="https://kinsta.com/wordpress-hosting/single-sites/">Single high-resource site</a></li>
+	<li id="menu-item-95040" class="menu-item menu-item-type-post_type_archive menu-item-object-case_studies menu-item-95040"><a href="https://kinsta.com/clients/">Case studies</a></li>
+</ul>
+</li>
+<li id="menu-item-95012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95012"><h3 >Resources</h3>
+<ul class="sub-menu">
+	<li id="menu-item-109761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-109761"><a href="https://kinsta.com/docs/">Documentation</a></li>
+	<li id="menu-item-162064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162064"><a href="https://kinsta.com/changelog/">Changelog</a></li>
+	<li id="menu-item-95034" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-95034"><a href="https://kinsta.com/blog/">Blog</a></li>
+	<li id="menu-item-170656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170656"><a href="https://kinsta.com/wordpress-newsletter/">Kinsta Newsletter</a></li>
+	<li id="menu-item-95031" class="menu-item menu-item-type-post_type_archive menu-item-object-knowledgebase menu-item-95031"><a href="https://kinsta.com/knowledgebase/">Knowledge Base</a></li>
+	<li id="menu-item-136781" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136781"><a href="https://kinsta.com/tools/">Development tools</a></li>
+	<li id="menu-item-99029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-99029"><a href="/kinsta-alternatives/">Kinsta vs competitors</a></li>
+	<li id="menu-item-102055" class="menu-item menu-item-type-post_type_archive menu-item-object-agency menu-item-102055"><a href="https://kinsta.com/agency-directory/">Agency directory</a></li>
+	<li id="menu-item-95058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95058"><a href="https://status.kinsta.com/">System Status</a></li>
+	<li id="menu-item-95030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95030"><a href="https://kinsta.com/resources/">All resources</a></li>
+</ul>
+</li>
+<li id="menu-item-95013" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95013"><h3 >Company</h3>
+<ul class="sub-menu">
+	<li id="menu-item-95043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95043"><a href="https://kinsta.com/about-us/">About us</a></li>
+	<li id="menu-item-95045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95045"><a href="https://kinsta.com/why-us/">Why choose Kinsta</a></li>
+	<li id="menu-item-95046" class="menu-item menu-item-type-post_type_archive menu-item-object-job menu-item-95046"><a href="https://kinsta.com/careers/">Careers</a></li>
+	<li id="menu-item-95048" class="menu-item menu-item-type-post_type_archive menu-item-object-partner menu-item-95048"><a href="https://kinsta.com/partners/">Partners</a></li>
+	<li id="menu-item-162823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162823"><a href="https://kinsta.com/research-program/">Research program</a></li>
+	<li id="menu-item-136896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136896"><a href="https://kinsta.com/affiliates/">Affiliate program</a></li>
+	<li id="menu-item-95047" class="menu-item menu-item-type-post_type_archive menu-item-object-news menu-item-95047"><a href="https://kinsta.com/press/">Press</a></li>
+	<li id="menu-item-162731" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162731"><a href="https://trust.kinsta.com/">Security and trust</a></li>
+	<li id="menu-item-95049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95049"><a href="https://kinsta.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+</ul></nav><div class="site-footer__security">
+    <div class="site-footer__security__text">
+        <h4>We take security and privacy seriously</h4>
+        Learn more about 
+        <a  href="https://trust.kinsta.com/">
+            security and compliance at Kinsta        </a>
+    </div>
+    <ul class="site-footer__security__badges">
+        <li>SOC 2 Type II</li>
+        <li>GDPR</li>
+        <li>CCPA</li>
+    </ul>
+</div>
+<div class="site-footer__footbar theme--dark spectra-variables">
+    <div class="site-footer__footbar__start-group">
+        <div class='site-footer__logo'>
+            <svg  class="icon icon--logo" aria-hidden="true" focusable="false"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#logo" /></svg>        </div>
+        <nav class="site-footer__social">
+    <ul>
+                                <li>
+                <a  class="site-footer__social__link" href="https://github.com/kinsta/" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--github" aria-hidden="true" focusable="false" title="Kinsta on GitHub"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#github" /></svg><span class="screen-reader-text">Kinsta on GitHub</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://twitter.com/kinsta" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--twitter" aria-hidden="true" focusable="false" title="Kinsta on Twitter"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#twitter" /></svg><span class="screen-reader-text">Kinsta on Twitter</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.youtube.com/kinsta" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--youtube" aria-hidden="true" focusable="false" title="Kinsta on YouTube"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#youtube" /></svg><span class="screen-reader-text">Kinsta on YouTube</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.facebook.com/kinstahosting" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--facebook" aria-hidden="true" focusable="false" title="Kinsta on Facebook"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#facebook" /></svg><span class="screen-reader-text">Kinsta on Facebook</span>                </a>
+            </li>
+                                <li>
+                <a  class="site-footer__social__link" href="https://www.linkedin.com/company/kinsta/" target="_blank" rel="noopener noreferrer">
+                    <svg  class="icon icon--linkedin" aria-hidden="true" focusable="false" title="Kinsta on LinkedIn"><use xlink:href="https://kinsta.com/wp-content/themes/kinsta/dist/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#linkedin" /></svg><span class="screen-reader-text">Kinsta on LinkedIn</span>                </a>
+            </li>
+            </ul>
+</nav>
+    </div>
+            <div class="site-footer__language">
+            <label class="language-select-label"><span class="screen-reader-text">Switch language</span><select class="language-select site-footer__language__options"><option lang="da" value="https://kinsta.com/dk/videnbase/react-must-be-in-scope-when-using-jsx/">Dansk</option><option lang="de" value="https://kinsta.com/de/wissensdatenbank/react-must-be-in-scope-when-using-jsx/">Deutsch</option><option lang="en" value="https://kinsta.com/knowledgebase/react-must-be-in-scope-when-using-jsx/" selected='selected'>English</option><option lang="es" value="https://kinsta.com/es/base-de-conocimiento/react-debe-estar-dentro-del-alcance-cuando-se-utiliza-jsx/">Español</option><option lang="fr" value="https://kinsta.com/fr/base-de-connaissances/react-must-be-in-scope-when-using-jsx/">Français</option><option lang="it" value="https://kinsta.com/it/knowledgebase/react-must-be-in-scope-when-using-jsx/">Italiano</option><option lang="nl" value="https://kinsta.com/nl/kennisbank/react-must-be-in-scope-when-using-jsx/">Nederlands</option><option lang="ja" value="https://kinsta.com/jp/knowledgebase/react-must-be-in-scope-when-using-jsx/">日本語</option><option lang="pt" value="https://kinsta.com/pt/base-de-conhecimento/react-must-be-in-scope-when-using-jsx/">Português</option><option lang="sv" value="https://kinsta.com/se/kunskapsbas/react-must-be-in-scope-when-using-jsx/">Svenska</option></select></label>        </div>
+    </div>
+<p class="site-footer__footnote">
+    <small>&copy; 2013 - 2024 Kinsta Inc. All rights reserved.</small>
+    <small>Kinsta&reg; and WordPress&reg; are registered trademarks.</small>
+    <small><a href="https://kinsta.com/legal/">Legal information.</a></small>
+</p>
+
+</footer>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0' id='jquery-form-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://kinsta.com/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='kinsta-js-main-js-extra'>
+/* <![CDATA[ */
+var kinsta = {"ajaxurl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","apiUrl":"https:\/\/kinsta.com\/wp-json\/","kinstanonce":"2374839a08","stripe_public_key":"pk_live_r16EiSaRITiPDMKQjLeoOviT","sentry_key":null,"env":"production","chevronRight":"<svg  class=\"icon icon--chevron color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#chevron\" \/><\/svg>","chevronLeft":"<svg  class=\"icon icon--chevron color--purple icon--reverse\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#chevron\" \/><\/svg>","check_m":"<svg  class=\"icon icon--check color--purple\" aria-hidden=\"true\" focusable=\"false\"><use xlink:href=\"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af#check\" \/><\/svg>","translations":{"thanksForSubscribing":"Thanks for subscribing!","validationRequired":"Please fill out this field","validationEmail":"Please provide a valid email address","validationPassword":"Password must contain a min. of 6 characters, at least one lowercase and capital letter, and a number","validationDuplicate":"The two fields do not match","validationVatInvalidCountry":"The country code of your VAT number does not match your selected country","validationVatInvalidFormat":"The entered VAT number is invalid","validationVatInvalidVies":"The entered VAT number could not be verified by the EU VIES system","validationCard":"Your card details are incorrect","validationFreeEmail":"Email already in use"},"svg_sprite":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta\/dist\/sprite.svg?v=ee46f74f2ca7a47f85d94fa9f960d7af","urls":{"api":"https:\/\/kinsta.com\/wp-json\/","ajax":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","terms":"https:\/\/kinsta.com\/legal\/terms-service\/","privacy":"https:\/\/kinsta.com\/legal\/privacy-policy\/","home":"https:\/\/kinsta.com\/","theme":"https:\/\/kinsta.com\/wp-content\/themes\/kinsta","cookieSettings":"https:\/\/kinsta.com\/cookie-settings\/"},"contact_terms_html":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p><small>By submitting this form: You agree to the processing of the submitted personal data in accordance with Kinsta's <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/legal\/privacy-policy\/\">Privacy Policy<\/a>, including the transfer of data to the United States.<\/small><\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--8\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"mt--0 mb--0\"><small>You also agree to receive information from Kinsta related to our services, events, and promotions. You may unsubscribe at any time by following the instructions in the communications received.<\/small><\/p>\n              <\/label>\n      <\/div>\n<\/div>\n","maintenanceMode":"","timeFormat":"g:i a","dateFormat":"F j, Y","defaultPlan":"visits-pro","defaultPlanInterval":"year","cookiesBar":{"isOpen":false},"globalBanner":{"text":"","link":"https:\/\/kinsta.com\/wordpress-hosting\/pricing\/","theme":"default","email":false,"event_label":"","success_message":"Success! Your request has been submitted. Click to learn more about Application and Database hosting at Kinsta. ","hash":"65adb17be90c32594a63184804d3ba5d","isOpen":false}};
+var kinstaVatRates = {"AT":"0.2","BE":"0.21","BG":"0.2","HR":"0.25","CY":"0.19","CZ":"0.21","DK":"0.25","EE":"0.22","FI":"0.24","FR":"0.2","DE":"0.19","GR":"0.24","HU":"0.27","IE":"0.23","IT":"0.22","LV":"0.21","LT":"0.21","LU":"0.17","MT":"0.18","NL":"0.21","PL":"0.23","PT":"0.23","RO":"0.19","SK":"0.2","SI":"0.22","ES":"0.21","SE":"0.25","GB":"0.2"};
+var kinstaFloatingContactText = {"termsHtml":"<div class=\"form-control mt--15 terms-checkbox\" data-state=\"neutral\">\n  <div class=\"control-container\">\n          <p><small>By submitting this form: You agree to the processing of the submitted personal data in accordance with Kinsta's <a class=\"unslidelink--text\" target=\"_blank\" href=\"https:\/\/kinsta.com\/legal\/privacy-policy\/\">Privacy Policy<\/a>, including the transfer of data to the United States.<\/small><\/p>\n              <label class=\"checkbox-label row nocol js-marketing-optin\">\n        <span class=\"checkbox mr--8\">\n          <input name=\"marketing_opt_in\" type=\"checkbox\" checked \/>\n          <span class=\"indicator\"><\/span>\n        <\/span>\n                  <p class=\"mt--0 mb--0\"><small>You also agree to receive information from Kinsta related to our services, events, and promotions. You may unsubscribe at any time by following the instructions in the communications received.<\/small><\/p>\n              <\/label>\n      <\/div>\n<\/div>\n"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='kinsta-js-main-js-before'>
+var singularState = {"postId":150780,"postSlug":"react-must-be-in-scope-when-using-jsx","postType":"knowledgebase","languages":["it","pt","fr","de","jp","nl","es","se","dk"],"currentLanguage":"en"}
+var kinstaContactFormState = {"userId":150780,"userAge":1718797085,"recentPosts":[{"title":"How AI and ChatGPT enhance WordPress functionality","thumbnail":"https:\/\/kinsta.com\/wp-content\/uploads\/2024\/06\/wp-how-ai-and-chatgpt-are-enhancing-wordpress-functionality-800x400.jpg","permalink":"https:\/\/kinsta.com\/blog\/chatgpt-wordpress\/"},{"title":"PHP workers vs PHP memory limit: understand the difference","thumbnail":"https:\/\/kinsta.com\/wp-content\/uploads\/2024\/06\/wp-understanding-the-differences-between-php-memory-limit-and-php-workers-800x400.jpg","permalink":"https:\/\/kinsta.com\/blog\/php-workers-vs-php-memory-limit\/"}],"nonce":"d4dfdcae4d","isEnabled":true,"isFloatingEnabled":false,"isContactFormPage":false}
+var siteState = {"adminAjaxUrl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","restBaseUrl":"https:\/\/kinsta.com\/wp-json\/kinsta\/v1","restNonce":"d4dfdcae4d","siteEnv":"production"}
+</script>
+<script type='text/javascript' src='https://kinsta.com/wp-content/themes/kinsta/dist/main.js?ver=c2fa3fb7978dd3e9ac6d' id='kinsta-js-main-js'></script>
+<script type='text/javascript' id='wordlift-js-extra'>
+/* <![CDATA[ */
+var wlSettings = {"ajaxUrl":"https:\/\/kinsta.com\/wp-admin\/admin-ajax.php","apiUrl":"https:\/\/kinsta.com\/wl-api\/","jsonld_url":"https:\/\/kinsta.com\/wp-json\/wordlift\/v1\/jsonld\/","postId":"150780","jsonld_enabled":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kinsta.com/wp-content/plugins/wordlift/js/dist/bundle.js?ver=3.40.2' id='wordlift-js'></script>
+<script type='text/javascript' id='wordlift-cloud-js-extra'>
+/* <![CDATA[ */
+var _wlCloudSettings = {"selector":"a.wl-entity-page-link","url":"https:\/\/kinsta.com\/wp-json\/wordlift\/v1\/jsonld"};
+/* ]]> */
+</script>
+<script type='text/javascript' defer="defer" src='https://kinsta.com/wp-content/plugins/wordlift/js/dist/wordlift-cloud.js?ver=3.40.2' id='wordlift-cloud-js'></script>
+</body>
+</html>
