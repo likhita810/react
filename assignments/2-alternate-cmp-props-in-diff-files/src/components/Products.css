@@ -1,0 +1,19 @@
+body{
+    width: 100%;
+    background-image: linear-gradient(to bottom right,rgb(245, 245, 107), lightyellow, rgb(245, 245, 107)) ;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    color: rgb(171, 69, 69);
+}
+
+li strong {
+    font-size: 24px;
+    color:rgb(171, 69, 69);
+}
+
+.products img {
+    margin-left: 0%;
+}

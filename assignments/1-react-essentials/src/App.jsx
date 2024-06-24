@@ -23,7 +23,7 @@ function Header () {
   return (
     <>
     <h1>Essesntial Concepts of React js</h1>
-    <img src={reactImg} alt="reactImg" title="reactImg" width="200px" height="200px" border="2px double"/>
+    <img src={reactImg} alt="reactImg" title="reactImg" width="200px" height="200px" border="2px"/>
     {/* this img is not related to the Main components prop concept. this is dynamic image formatting */}
     </>
   )
@@ -33,9 +33,9 @@ function Nav() {
   return (
     <>
     <ul>
-      <li>dynamic values</li>
-      <li>dynamic image formatting</li>
-      <li>Component properties</li>
+      <li><a href="#">dynamic values</a></li>
+      <li><a href="#">dynamic image formatting</a></li>
+      <li><a href="#">cmp props</a></li>
     </ul>
     </>
   )
@@ -45,10 +45,10 @@ function Main(props) {
   const propImg = propImgs[getRandomPropImg(4)];
   return (
     <>
-    <img src={propImg} alt={propImg} title={propImg} width="200px" height="200px" border="2px double" />
+    <img src={propImg} alt={propImg} title={propImg} width="200px" height="200px" border="2px" />
     {/* Though this image is inside main, since props concept is not used, it cant be reused later elsewhere. */}
     <p></p>
-    <img src={props.image} alt={props.description} title={props.title} width="200px" height="200px" border="2px double"/>
+    <img src={props.image} alt={props.description} title={props.title} width="200px" height="200px" border="2px"/>
     {/* from this, the img in other components can be changed or new images can be given using this component and its properties. */}
     <p>The term props in abbreviation refers to the properties of an object within a component</p>
     <p>It enables the component to access customized data, values and any kind of information it holds.</p>
@@ -70,15 +70,12 @@ function App() {
     <Header/>
     <p>This page contains the essentail concepts of react js</p>
     <p>It involves nested components, dynamic values and dynamic images and also component properties.</p>
-    <p>-------------------------------------------------------------------------------------------------------</p>
 
     <Nav/>
-    <p>-------------------------------------------------------------------------------------------------------</p>
 
     {/* <Main/> */}
     {/* since we are calling Main in Footer component, its not necessary to call it again here. if called, it will run 2 different times. */}
     <Footer/>
-    <p>-------------------------------------------------------------------------------------------------------</p>
 
     <p>&copy; All Copy Rights Reserved</p>
     </>

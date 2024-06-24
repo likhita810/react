@@ -1,0 +1,12 @@
+h1 {
+    background: -webkit-linear-gradient(blueviolet,orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    text-align: center;
+}
+
+img {
+    margin-left: 25%;
+}
