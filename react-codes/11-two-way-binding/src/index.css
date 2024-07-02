@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(purple,black);
+  color: white;
+  min-height: 100vh;
+}
+
+#header {
+  text-align: center;
+  margin: 3ren auto;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+}
+
+/* user input */
+
+#user-input {
+  padding: 1rem;
+  max-width: 30rem;
+  margin: 2rem auto;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, rgb(21, 150, 122), #2b9);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+#user-input label {
+  display: block;
+  margin-bottom:  0.25rem;
+  text-transform: uppercase;
+}
+
+#user-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid purple;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: aliceblue;
+}
+
+#results {
+  max-width: 5rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 1rem;
+  text-align: right;
+}
+
