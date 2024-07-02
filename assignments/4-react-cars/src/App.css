@@ -1,0 +1,84 @@
+html {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+}
+
+main {
+    margin-left: 15%;
+    width:100%;
+}
+
+
+h1 {
+    background: -webkit-linear-gradient(red,orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    text-align: center;
+    margin-left: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    width: 80%;
+}
+.cars{
+    width: 100%;
+    height: 300px;
+    animation: moveCar 4s linear infinite;
+}
+
+.cars:hover {
+    transform: scale(1.4);
+}
+
+@keyframes moveCar {
+    to {
+        transform:rotateY(360deg);
+    }
+}
+
+
+h2{
+   text-align: center;
+   background: -webkit-linear-gradient(aliceblue,rgb(252, 252, 100));
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.details {
+    background: -webkit-linear-gradient(aliceblue,rgb(252, 252, 100));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    margin-left: 20%;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons div{
+    margin-left: 120px;
+    background: -webkit-linear-gradient(aliceblue,rgb(252, 252, 100));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    margin-bottom: 30px;
+}
+
+.buttons img{
+    margin-left: 25%;
+}
+
+.info {
+    margin-left: 40%;
+    background: -webkit-linear-gradient(aliceblue,rgb(252, 252, 100));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
+.nav {
+    margin-left: 20%;
+}
